@@ -237,7 +237,8 @@ The stack effect notation is as follows:
 * As with the variables, flags that are set by words precede "-" and flags that are used by the words are placed after the "-". 
 * Flags, however do not reside on the stack.  Therefore they may not be in a deterministic state unless changed by the previous command. For this reason flags are represented in italics. 
  
- 
+Char | Meaning  
+--- | ---
 N | Number 
 A | Cell address
 Ba | Byte address
