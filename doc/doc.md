@@ -234,7 +234,7 @@ The stack effect notation is as follows:
 * If there is a "-" preceding the variables they are produced by the word.
 * As with the variables, flags that are set by words precede "-" and flags that are used by the words are placed after the "-". 
 * Flags, however do not reside on the stack.  Therefore they may not be in a deterministic state unless changed by the previous command. For this reason flags are represented in italics. 
-
+<dl>
 <dt>N</dt>
 <dd>     Number </dd>
 <dt>A</dt>
@@ -265,6 +265,7 @@ The stack effect notation is as follows:
 <dd>     Carry flag</dd>
 <dt>SF</dt>
 <dd>     Sign flag</dd>
+<dl>
 
 **`! (a)							Macro`**
 :    Store word at address.
