@@ -6,6 +6,7 @@ The first thing you will notice on booting 2.0a is that instead of reading 90 bl
 
 `block`
 :    works as it always has in colorForth – converting a block number to a word address in memory.  Absolute block zero is still at absolute memory address zero.  However,  block  internally adds the value of a variable called  offset  to incoming block numbers before multiplying them by 256.  The value set in  offset  reflects the absolute memory address at which the disk image was read at boot.  Various BIOSes have forced this address to be two binary million (200000 hex as a byte address; 80000 as a word address) so that the value in  offset  is  hex 800, decimal 2048.  This affects all uses of  block  including  load  and  edit .
+
 `offset`
 :    has been added to the dictionary so it is accessible from colorForth source.
 
