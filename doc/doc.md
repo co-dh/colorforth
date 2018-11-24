@@ -113,71 +113,75 @@ While in text entry mode of the editor, the Esc key is disabled while a word is 
 
 ## Interpreter commands ##
 
-`bye`
-:     closes coloforth
-`e or edit`
-:     enter editor
-`find`
-:     Waits for a second word to be typed then searches for the first occurrence of that word starting from block 18. Find will enter the editor after execution if the word is found. If the word is not found it will stay in the interpreter. Does not find literals.
-`literal (n)`
-:     Same as find but looks for n  as a yellow or green number in either hex or decimal, matching the value and not the representation in either radix
-`def`
-:     Same as find but looks for a (red word) / definition.
-`from (n)`
-:     Same as find but start at block n ie n from
-`c`
-:     Clears stack
+<dl>
+<dt>`bye`</dt>
+<dd>:     closes coloforth</dd>
+<dt>`e or edit`</dt>
+<dd>:     enter editor</dd>
+<dt>`find`</dt>
+<dd>:     Waits for a second word to be typed then searches for the first occurrence of that word starting from block 18. Find will enter the editor after execution if the word is found. If the word is not found it will stay in the interpreter. Does not find literals.</dd>
+<dt>`literal (n)`</dt>
+<dd>:     Same as find but looks for n  as a yellow or green number in either hex or decimal, matching the value and not the representation in either radix</dd>
+<dt>`def`</dt>
+<dd>:     Same as find but looks for a (red word) / definition.</dd>
+<dt>`from (n)`</dt>
+<dd>:     Same as find but start at block n ie n from</dd>
+<dt>`c`</dt>
+<dd>:     Clears stack</dd>
+</dl>
 
 ## Editor commands ##
 
-S (Shift Lock) comment
-:    Enter comment (white) in capitols 
-  C (Capitalize) comment
-:    Enter comment (white) first letter capitalized
-  t (text) comment
-:    Enter comment (white) all lower case
-  y (yellow) Interpreter
-:    Executes when encountered.  Gets executed during compilation if used inside a definition.
-  r (red) Word
-:    Word definition.  After the word is completed the color switches to green to enter instructions that the word defines.
-  g (green) Default compilation.
-:    Call Forth words or execute macros.
-  x is really an *
-:    Toggles between an even (source) block and odd (shadow) block.  This is normally used to document the associated text.
-  c (change)
-:    Changes color of word that follows cursor.
-  d (definition)
-:    Finds the (red word) / definition of the (green word) / call that is following the cursor.
-  f ( find)
-:    Finds the next word color combination occurrence of the search that was entered from the interpreter.
-  J
-:    Toggles between current block and the last block.  To write a block to the last block, enter <nn> edit from the interpretive mode.  <nn> is the number of the block to be edited. The <nn> block will be the last block and will be toggled with the current block.
-  l (left)
-:    Moves cursor left one word
-  u (up)
-:    Moves cursor up. ( left eight words )
-  d (down)
-:    Moves cursor down. (right eight words)
-  r (right)	
-:    Moves cursor right one word.
-  k (copy)
-:    Copies word to the left of the cursor and places on the stack.
-  - (down block)
-:    Moves down one block of memory
-  m (magenta) variable
-:    Variable name must fit in one cell.  Four characters will always fit in one cell.  The maximum length is seven characters but this depends on Shannon code.
-  c (cyan)
-:    Always compile.  Forces a call to a word.
-  + (up block)
-:    Moves up one block of memory.
-  x (cut)
-:    Deletes word to left of cursor and places on the stack.
-  .	
-:    Returns to interpreter.
-  i (insert)
-:    Pops words off of stack and places to at cursor. 
-  Esc	
-:    Returns to the editor control panel.
+<dl>
+<dt>S (Shift Lock) comment</dt>
+<dd>:    Enter comment (white) in capitols </dd>
+<dt>  C (Capitalize) comment</dt>
+<dd>:    Enter comment (white) first letter capitalized</dd>
+<dt>  t (text) comment</dt>
+<dd>:    Enter comment (white) all lower case</dd>
+<dt>  y (yellow) Interpreter</dt>
+<dd>:    Executes when encountered.  Gets executed during compilation if used inside a definition.</dd>
+<dt>  r (red) Word</dt>
+<dd>:    Word definition.  After the word is completed the color switches to green to enter instructions that the word defines.</dd>
+<dt>  g (green) Default compilation.</dt>
+<dd>:    Call Forth words or execute macros.</dd>
+<dt>  x is really an *</dt>
+<dd>:    Toggles between an even (source) block and odd (shadow) block.  This is normally used to document the associated text.</dd>
+<dt>  c (change)</dt>
+<dd>:    Changes color of word that follows cursor.</dd>
+<dt>  d (definition)</dt>
+<dd>:    Finds the (red word) / definition of the (green word) / call that is following the cursor.</dd>
+<dt>  f ( find)</dt>
+<dd>:    Finds the next word color combination occurrence of the search that was entered from the interpreter.</dd>
+<dt>  J</dt>
+<dd>:    Toggles between current block and the last block.  To write a block to the last block, enter <nn> edit from the interpretive mode.  <nn> is the number of the block to be edited. The <nn> block will be the last block and will be toggled with the current block.</dd>
+<dt>  l (left)</dt>
+<dd>:    Moves cursor left one word</dd>
+<dt>  u (up)</dt>
+<dd>:    Moves cursor up. ( left eight words )</dd>
+<dt>  d (down)</dt>
+<dd>:    Moves cursor down. (right eight words)</dd>
+<dt>  r (right)	</dt>
+<dd>:    Moves cursor right one word.</dd>
+<dt>  k (copy)</dt>
+<dd>:    Copies word to the left of the cursor and places on the stack.</dd>
+<dt>  - (down block)</dt>
+<dd>:    Moves down one block of memory</dd>
+<dt>  m (magenta) variable</dt>
+<dd>:    Variable name must fit in one cell.  Four characters will always fit in one cell.  The maximum length is seven characters but this depends on Shannon code.</dd>
+<dt>  c (cyan)</dt>
+<dd>:    Always compile.  Forces a call to a word.</dd>
+<dt>  + (up block)</dt>
+<dd>:    Moves up one block of memory.</dd>
+<dt>  x (cut)</dt>
+<dd>:    Deletes word to left of cursor and places on the stack.</dd>
+<dt>  .	</dt>
+<dd>:    Returns to interpreter.</dd>
+<dt>  i (insert)</dt>
+<dd>:    Pops words off of stack and places to at cursor. </dd>
+<dt>  Esc	</dt>
+<dd>:    Returns to the editor control panel.</dd>
+</dl>
 
 ##	Search utility ##
 
@@ -185,26 +189,31 @@ This utility, integrated with the editor, facilitates searching the source in se
 The searches continue until the end of nc cylinders. For the interpretive f below, searches continue from the point of last find in that same search. The continuation point is the current cursor position when the editor’s "f" key is used.
 The searches automatically consider only blocks of the same sort (source or shadow) as the block in which the search was started or continued. Thus, all searches start with source only; if they are continued using the interpretive f or if the editor cursor is never changed before using the editor’s "f" key, shadows will never be considered in that search. To search shadows, begin a search, ignore the first find (or no find), edit block 19, and then continue the search with the editor’s "f" key.
 
-`find`
-:     awaits a word from the keyboard and starts a new search for that word.  It will find all instances of that word as a definition (red or magenta), reference (green, yellow or cyan), or any sort of comment.
-`def`
-:     awaits a word from the keyboard and starts a new search for that word, as a definition (red or magenta) only.
-`from (n)`
-:     awaits a word from the keyboard and starts a new search for that word, in any form as in  find  but starting in block  n  instead of block 18.
-`literal (n)`
-:     starts a new search for the value n as a yellow or green number in either hex or decimal, matching the value and not the representation in either radix.
-`f`
-:     continues the most recently started search immediately after the point at which the last target was found in that search.  Due to the new dichotomy between source and shadows, this word is of limited usefulness.
+<dl>
+<dt>`find`</dt>
+<dd>:     awaits a word from the keyboard and starts a new search for that word.  It will find all instances of that word as a definition (red or magenta), reference (green, yellow or cyan), or any sort of comment.</dd>
+<dt>`def`</dt>
+<dd>:     awaits a word from the keyboard and starts a new search for that word, as a definition (red or magenta) only.</dd>
+<dt>`from (n)`</dt>
+<dd>:     awaits a word from the keyboard and starts a new search for that word, in any form as in  find  but starting in block  n  instead of block 18.</dd>
+<dt>`literal (n)`</dt>
+<dd>:     starts a new search for the value n as a yellow or green number in either hex or decimal, matching the value and not the representation in either radix.</dd>
+<dt>`f`</dt>
+<dd>:     continues the most recently started search immediately after the point at which the last target was found in that search.  Due to the new dichotomy between source and shadows, this word is of limited usefulness.</dd>
+</dl>
 
 When in the editor, two keys activate word search functions without leaving the editor:
 
-**`"f"`**
-:    control panel key continues the most recently begun search, beginning after the current editor cursor position.  If the current block is source, only source will be searched; if it is a shadow, only shadows.
- **`"d"`**
-:    control panel key starts a new search based on the word immediately preceding the cursor.
+<dl>
+<dt>**`"f"`**</dt>
+<dd>:    control panel key continues the most recently begun search, beginning after the current editor cursor position.  If the current block is source, only source will be searched; if it is a shadow, only shadows.</dd>
+<dt> **`"d"`**</dt>
+<dd>:    control panel key starts a new search based on the word immediately preceding the cursor.
     *	If the word is a definition (red or magenta) then the new search will be for references (green, yellow, or cyan) to that word.
     *	If the word is a reference or a comment, then the new search will be for definitions of that word.
     *	If the word is a literal number, then we do not search as such but simply edit the block by that number.
+</dd>
+</dl>
 
 ## Reading and Writing ##
 On activating ColorForth2, the disk image file named OkadWork.cf is read into memory for 1440 blocks, and the file is closed.  From then on you are working with a RAM image of virtual disk.  The actual file is only updated when you explicitly say to do so.
