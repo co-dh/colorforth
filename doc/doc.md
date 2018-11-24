@@ -237,23 +237,13 @@ The stack effect notation is as follows:
 * As with the variables, flags that are set by words precede "-" and flags that are used by the words are placed after the "-". 
 * Flags, however do not reside on the stack.  Therefore they may not be in a deterministic state unless changed by the previous command. For this reason flags are represented in italics. 
  
-Char | Meaning  
---- | ---
-N | Number 
-A | Cell address
-Ba | Byte address
-M | Multiplier
-Q | Quotient
-D | Divisor
-B | Block number
-X | Non specified 1 cell of memory
-R | Remainder
-C | Cylinder or character
-F | Flag
-ZF | Zero flag
-OF | Overflow flag
-CF | Carry flag
-SF | Sign flag
+Char | Meaning |  Char | Meaning  |  Char | Meaning  
+--- | --- |  --- | --- |  --- | ---
+N | Number  | A | Cell address | Ba | Byte address |
+M | Multiplier | Q | Quotient | D | Divisor |
+B | Block number | X | Non specified 1 cell of memory | R | Remainder |
+C | Cylinder or character | F | Flag | ZF | Zero flag |
+OF | Overflow flag | CF | Carry flag | SF | Sign fla |g
 
 **`! (a)							Macro`**
 :    Store word at address.
