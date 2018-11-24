@@ -190,15 +190,15 @@ The searches continue until the end of nc cylinders. For the interpretive f belo
 The searches automatically consider only blocks of the same sort (source or shadow) as the block in which the search was started or continued. Thus, all searches start with source only; if they are continued using the interpretive f or if the editor cursor is never changed before using the editor’s "f" key, shadows will never be considered in that search. To search shadows, begin a search, ignore the first find (or no find), edit block 19, and then continue the search with the editor’s "f" key.
 
 <dl>
-<dt>`find`</dt>
+<dt>find</dt>
 <dd>:     awaits a word from the keyboard and starts a new search for that word.  It will find all instances of that word as a definition (red or magenta), reference (green, yellow or cyan), or any sort of comment.</dd>
-<dt>`def`</dt>
+<dt>def</dt>
 <dd>:     awaits a word from the keyboard and starts a new search for that word, as a definition (red or magenta) only.</dd>
-<dt>`from (n)`</dt>
+<dt>from (n)</dt>
 <dd>:     awaits a word from the keyboard and starts a new search for that word, in any form as in  find  but starting in block  n  instead of block 18.</dd>
-<dt>`literal (n)`</dt>
+<dt>literal (n)</dt>
 <dd>:     starts a new search for the value n as a yellow or green number in either hex or decimal, matching the value and not the representation in either radix.</dd>
-<dt>`f`</dt>
+<dt>f</dt>
 <dd>:     continues the most recently started search immediately after the point at which the last target was found in that search.  Due to the new dichotomy between source and shadows, this word is of limited usefulness.</dd>
 </dl>
 
