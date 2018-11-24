@@ -585,7 +585,7 @@ Forth sets aDEFINE to forthd. The definition behavior is to add an entry to the 
 :    fov is an abstract scale factor used in some applications.
 
 **`freeze							Kernel`**
-:    freeze  is a simple graphic process.  Usage is: : defn ...  freeze <thingstodo> ; The graphic task will endlessly do <thingstodo>. screen is the address of the thingstodo.
+:    freeze  is a simple graphic process.  Usage is: : defn ...  freeze \<thingstodo\> ; The graphic task will endlessly do <thingstodo>. screen is the address of the thingstodo.
 
 **`from (n)`**
 :    From is the same as find but searches from a specific block number n.  See section 3 colorforth human interface.
