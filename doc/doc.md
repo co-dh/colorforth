@@ -71,13 +71,13 @@ New words unique to the Windows system:
 
 <dl>
 <dt>utime ( - u)</dt>
-<dd>:     returns the unix time in seconds since midnight UTC on Friday 1 Jan 1970.</dd>
+<dd>     returns the unix time in seconds since midnight UTC on Friday 1 Jan 1970.</dd>
 <dt>endram ( - a)</dt>
-<dd>:     returns the address of the first byte past the end of memory allocated to the application.</dd>
+<dd>     returns the address of the first byte past the end of memory allocated to the application.</dd>
 <dt>keych ( - a)</dt>
-<dd>:     is a double cell variable.  The first cell if nonzero is a keyboard character (Windows key code) waiting to be processed by the keyboard task.  The second cell contains extended key flags which are not now relevant to us and probably never will be.</dd>
+<dd>     is a double cell variable.  The first cell if nonzero is a keyboard character (Windows key code) waiting to be processed by the keyboard task.  The second cell contains extended key flags which are not now relevant to us and probably never will be.</dd>
 <dt>retain</dt>
-<dd>:     writes the 1440 block image from memory into a file called OkadWork.cf.  This is the same file name that is read when starting the program.  If you wish to save the original, do so at some time before  retain  - the file is not open while the program is running, so it can be renamed after starting the program.  Note however that the file must exist by that name, even if zero length.</dd>
+<dd>     writes the 1440 block image from memory into a file called OkadWork.cf.  This is the same file name that is read when starting the program.  If you wish to save the original, do so at some time before  retain  - the file is not open while the program is running, so it can be renamed after starting the program.  Note however that the file must exist by that name, even if zero length.</dd>
 </dl>
 
 ## Editor, keyboard ##
@@ -92,23 +92,24 @@ stack                     current text
 
 While in text entry mode of the editor, the Esc key is disabled while a word is in the current text area. The following table lists the keys, corresponding actions, a sample key sequence, and changes in the hint area. Enter or Spacebar will place something on the stack or execute if in the interpreter. They will place the word after the cursor if in text entry mode of the editor.
 
-`a-z !@*-+;,.?/`
-:     Enters text.
-:     add
-`0-9`
-:     Enters a number. The number is written in the stack area; not in the current text area.
-`-`
-:     Negates current number. Negates the current number. A digit must be entered before - or it will be entered as text.
-`` (grave accent)`
-:     Forces text for number
-`F1`
-:     Toggles Hex / Decimal
-`Backspace`
-:     Aborts current word
-`Enter / Spacebar`
-:     Enters a word on the stack in the interpreter. Places the current word after the cursor in a block in editor text entry mode. Clears current text after entry.
-`Esc`
-:     Exits text entry mode of editor. NOTE: Current word must be entered or aborted or the key will have no effect.
+<dl>
+<dt>`a-z !@*-+;,.?/`</dt>
+<dd>:     Enters text.</dd>
+<dt>`0-9`</dt>
+<dd>:     Enters a number. The number is written in the stack area; not in the current text area.</dd>
+<dt>`-`</dt>
+<dd>:     Negates current number. Negates the current number. A digit must be entered before - or it will be entered as text.</dd>
+<dt>`` (grave accent)`</dt>
+<dd>:     Forces text for number</dd>
+<dt>`F1`</dt>
+<dd>:     Toggles Hex / Decimal</dd>
+<dt>`Backspace`</dt>
+<dd>:     Aborts current word</dd>
+<dt>`Enter / Spacebar`</dt>
+<dd>:     Enters a word on the stack in the interpreter. Places the current word after the cursor in a block in editor text entry mode. Clears current text after entry.</dd>
+<dt>`Esc`</dt>
+<dd>:     Exits text entry mode of editor. NOTE: Current word must be entered or aborted or the key will have no effect.</dd>
+</dl>
 
 ## Interpreter commands ##
 
