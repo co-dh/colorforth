@@ -221,19 +221,19 @@ In the native system, this is done by typing floppy archive .  On the Windows sy
 Disk operations have been adjusted to give equivalent functionality on both native and Windows systems.  The following resident operations now exist on both platforms:
 
 <dl>
-<dt>`save`</dt>
+<dt>save</dt>
 <dd>:     writes the active disk image ( nc  cylinders at block 0) to (native) floppy or (Windows) OkadWork.cf file.  This includes boot, native kernel, icon table and source code.</dd>
-<dt>`wrtboot`</dt>
+<dt>wrtboot</dt>
 <dd>:     writes the boot and kernel image from block 0 to a native floppy, as an economical way to update the native kernel on floppy after executing  ati  or  nvidia  in the  floppy  utility.  It does nothing on Windows systems.</dd>
-<dt>`!back ( n)`</dt>
+<dt>!back ( n)</dt>
 <dd>:     writes nc cylinders to a (native) floppy or (Windows) OkadBack.cf file from RAM block  n .</dd>
-<dt>`@back ( n)`</dt>
+<dt>@back ( n)</dt>
 <dd>:     reads nc cylinders from a (native) floppy or (Windows) OkadBack.cf file into RAM at block  n .</dd>
-<dt>`@cyls ( a c n)`</dt>
+<dt>@cyls ( a c n)</dt>
 <dd>:     reads  n  cylinders to cell address  a  from cylinder  c  on backup.  For native, the read is direct from floppy.  For Windows, the whole OkadBack.cf  file is read into RAM at block 3000 and then the cylinder(s) in question are copied from there.</dd>
-<dt>`readme`</dt>
+<dt>readme</dt>
 <dd>:     reads the two cylinders at  cfuse  from the same cylinders on backup medium, using  @cyls .</dd>
-<dt>`tapeout`</dt>
+<dt>tapeout</dt>
 <dd>:     copies two cylinders of tapeout configuration from  cftape  to  cfuse  within the working RAM image.</dd>
 </dl>
 
