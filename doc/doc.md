@@ -585,7 +585,7 @@ Forth sets aDEFINE to forthd. The definition behavior is to add an entry to the 
 :    fov is an abstract scale factor used in some applications.
 
 **`freeze							Kernel`**
-:    freeze  is a simple graphic process.  Usage is: : defn ...  freeze \<thingstodo\> ; The graphic task will endlessly do <thingstodo>. screen is the address of the thingstodo.
+:    freeze  is a simple graphic process.  Usage is: : defn ...  freeze \<thingstodo\> ; The graphic task will endlessly do \<thingstodo\>. screen is the address of the thingstodo.
 
 **`from (n)`**
 :    From is the same as find but searches from a specific block number n.  See section 3 colorforth human interface.
@@ -761,13 +761,13 @@ Forth sets aDEFINE to macrod. The definition behavior is to add an entry to the 
 :    Produces a 1024x768 screen of current color.
 
 **`serve 						Kernel`**
-:    Serve is a simple receive process, endlessly performing PAUSE <thingstodo>  where the latter is in  receive. 
+:    Serve is a simple receive process, endlessly performing PAUSE \<thingstodo\>  where the latter is in  receive. 
 
 **`sec`**
 :    Seconds past midnight.
 
 **`show						Kernel`**
-:    Show  is a simple graphic process.  Usage is: : defn ...  show <thingstodo> ;  The graphic task will endlessly do <thingstodo> switchm graphic is a fixed nop; switchm refreshes screen and PAUSEs.
+:    Show  is a simple graphic process.  Usage is: : defn ...  show \<thingstodo\> ;  The graphic task will endlessly do \<thingstodo\> switchm graphic is a fixed nop; switchm refreshes screen and PAUSEs.
 
 **`silver`**
 :    Silver foreground.
