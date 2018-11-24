@@ -70,13 +70,13 @@ The keyboard is a faithful rendition of the Native keyboard with two major excep
 New words unique to the Windows system:
 
 <dl>
-<dt>**`utime ( - u)`**</dt>
+<dt>utime ( - u)</dt>
 <dd>:     returns the unix time in seconds since midnight UTC on Friday 1 Jan 1970.</dd>
-<dt>**`endram ( - a)`**</dt>
+<dt>endram ( - a)</dt>
 <dd>:     returns the address of the first byte past the end of memory allocated to the application.</dd>
-<dt>**`keych ( - a)`**</dt>
+<dt>keych ( - a)</dt>
 <dd>:     is a double cell variable.  The first cell if nonzero is a keyboard character (Windows key code) waiting to be processed by the keyboard task.  The second cell contains extended key flags which are not now relevant to us and probably never will be.</dd>
-<dt>**`retain`**</dt>
+<dt>retain</dt>
 <dd>:     writes the 1440 block image from memory into a file called OkadWork.cf.  This is the same file name that is read when starting the program.  If you wish to save the original, do so at some time before  retain  - the file is not open while the program is running, so it can be renamed after starting the program.  Note however that the file must exist by that name, even if zero length.</dd>
 </dl>
 
