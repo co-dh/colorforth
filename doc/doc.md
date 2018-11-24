@@ -129,6 +129,7 @@ While in text entry mode of the editor, the Esc key is disabled while a word is 
 
 S (Shift Lock) comment
 :    Enter comment (white) in capitols 
+
   C (Capitalize) comment
 :    Enter comment (white) first letter capitalized
   t (text) comment
