@@ -205,9 +205,9 @@ The searches automatically consider only blocks of the same sort (source or shad
 When in the editor, two keys activate word search functions without leaving the editor:
 
 <dl>
-<dt>**`"f"`**</dt>
+<dt>"f"</dt>
 <dd>:    control panel key continues the most recently begun search, beginning after the current editor cursor position.  If the current block is source, only source will be searched; if it is a shadow, only shadows.</dd>
-<dt> **`"d"`**</dt>
+<dt> "d"</dt>
 <dd>:    control panel key starts a new search based on the word immediately preceding the cursor.
     *	If the word is a definition (red or magenta) then the new search will be for references (green, yellow, or cyan) to that word.
     *	If the word is a reference or a comment, then the new search will be for definitions of that word.
