@@ -4,11 +4,12 @@
 
 The first thing you will notice on booting 2.0a is that instead of reading 90 blocks into memory at boot time, the system reads 1440. Colorforth 1.0 read from between one to eighty cylinders from a floppy with nc, cylinders from a (native) floppy, set to 5 for loading 90 blocks to memory at boot.
 <dl>
-<dt>`block`</dt>
+<dt>block</dt>
 <dd>    works as it always has in colorForth – converting a block number to a word address in memory.  Absolute block zero is still at absolute memory address zero.  However,  block  internally adds the value of a variable called  offset  to incoming block numbers before multiplying them by 256.  The value set in  offset  reflects the absolute memory address at which the disk image was read at boot.  Various BIOSes have forced this address to be two binary million (200000 hex as a byte address; 80000 as a word address) so that the value in  offset  is  hex 800, decimal 2048.  This affects all uses of  block  including  load  and  edit .</dd>
 `offset`
 :    has been added to the dictionary so it is accessible from colorForth source.
 </dl>
+
 The working Forth dictionary lies immediately after the disk image, at `offset` -relative block 1440.  The dictionary is followed immediately by the initial position of **`here`** as of the start of loading block 18.
 
 Other fixed allocations are made relative to very large block numbers and float above the point we call "block0" (200000 hex as a byte address in Native systems.)
@@ -234,36 +235,36 @@ The stack effect notation is as follows:
 * As with the variables, flags that are set by words precede "-" and flags that are used by the words are placed after the "-". 
 * Flags, however do not reside on the stack.  Therefore they may not be in a deterministic state unless changed by the previous command. For this reason flags are represented in italics. 
 
-N
-:     Number 
-A
-:     Cell address
-Ba
-:     Byte address
-M
-:     Multiplier
-Q
-:     Quotient
-D
-:     Divisor
-B
-:     Block number
-X
-:     Non specified 1 cell of memory
-R
-:     Remainder
-C
-:     Cylinder or character
-F
-:     Flag
-ZF
-:     Zero flag
-OF
-:     Overflow flag
-CF
-:     Carry flag
-SF
-:     Sign flag
+<dt>N</dt>
+<dd>     Number </dd>
+<dt>A</dt>
+<dd>     Cell address</dd>
+<dt>Ba</dt>
+<dd>     Byte address</dd>
+<dt>M</dt>
+<dd>     Multiplier</dd>
+<dt>Q</dt>
+<dd>     Quotient</dd>
+<dt>D</dt>
+<dd>     Divisor</dd>
+<dt>B</dt>
+<dd>     Block number</dd>
+<dt>X</dt>
+<dd>     Non specified 1 cell of memory</dd>
+<dt>R</dt>
+<dd>     Remainder</dd>
+<dt>C</dt>
+<dd>     Cylinder or character</dd>
+<dt>F</dt>
+<dd>     Flag</dd>
+<dt>ZF</dt>
+<dd>     Zero flag</dd>
+<dt>OF</dt>
+<dd>     Overflow flag</dd>
+<dt>CF</dt>
+<dd>     Carry flag</dd>
+<dt>SF</dt>
+<dd>     Sign flag</dd>
 
 **`! (a)							Macro`**
 :    Store word at address.
