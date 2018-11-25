@@ -1572,6 +1572,7 @@ Numbers have a bit for display format (decimal/hex). Those that fit in 27 bits (
 			                                     6      compile    green
 
 Larger numbers require 2 32-bit words
+
 		bits 31.........................5 4    3..0   function   color
 			                                hex  2      execute    yellow
 			                                     5      compile    green
