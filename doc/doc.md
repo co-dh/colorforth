@@ -1617,56 +1617,56 @@ Registers are assigned:
 
 27 chip primitives
 
-		Op      	 Word                                 	 Pentium                        	 Action
-		0       	 word ;                               	 jmp                            	 Jump to word; tail recursion
-		1       	 if                                   	 jz                             	 Jump to 'then' if zero
-		2       	 word                                 	 call                           	 Call word
-		3       	 -if                                  	 jns                            	 Jump to 'then' if not negative
-		6       	 ;                                    	 ret                            	 Return to calling word
-		8       	 @                                    	 mov EAX, [EAX*4]               	 Fetch from address on stack
-		                                                	 dup; mov EAX, a                	 Fetch from address in A; increment A 
-		9       	 @+                                   	 dup; mov EAX, [EDX*4]
-							                                      	 inc edx                        	 
-		a       	 n                                    	 dup; mov EAX, n                	 Fetch number
-		b       	 @r                                   	                                	 Fetch from address in R
-		c       	 !                                    	 a!; mov [EDX*4], EAX; drop     	 Store to address on stack
-		        	                                      	 mov a*4, EAX; drop
-		        	                                      	 mov a*4, n
-		d       	                                      	
-		e       	 !+                                   	 mov [EDX*4], EAX; inc EDX      	 Store to address in A; increment A
-		f       	 !r                                   	                                	 Store to address in R; increment R
-		10      	 2*                                   	 shl EAX, 1                     	 Shift stack left
-		11      	 2/                                   	 sar EAX, 1                     	 Shift stack right, propagate sign
-		12      	 -                                    	 not EAX                        	 Ones complement stack
-		14      	 and                                  	 and EAX, [ESI]; nip            	 And to stack
-		        	                                      	 and EAX, n
-		15      	 or                                   	 xor EAX, [ESI]; nip            	 Exclusive-or to stack
-		        	                                      	 xor EAX, n
-		16      	 +                                    	 add EAX, [ESI]; nip            	 Add to stack
-		        	                                      	 add EAX, n
-		17      	 *+                                   	                                	 Multiply step
-		18      	 push                                 	 push EAX; drop                 	 Push stack onto Return
-		19      	 a                                    	                                	 Load A register onto stack
-		1a      	 dup                                  	 lea ESI, ESI-4; mov [ESI], EAX 	 Duplicate stack
-		1b      	 over                                 	 dup; mov EAX, [ESI+4]          	 Load 2nd datum onto stack
-		1c      	 pop                                  	 dup; pop EAX                   	 Pop Return onto stack
-		1d      	 a!                                   	 mov EDX, EAX; drop             	 Store stack into A register
-		1e      	 drop                                 	 lodsd                          	 Discard stack
-		1f      	 nop                                  	 nop                            	 Do nothing
-
+	Op    	Word  	 Pentium                        	 Action
+	0     	word  	 jmp                            	 Jump to word; tail recursion
+	1     	if    	 jz                             	 Jump to 'then' if zero
+	2     	word  	 call                           	 Call word
+	3     	-if   	 jns                            	 Jump to 'then' if not negative
+	6     	;     	 ret                            	 Return to calling word
+	8     	@     	 mov EAX, [EAX*4]               	 Fetch from address on stack
+	              	 dup; mov EAX, a                	 Fetch from address in A; increment A 
+	9     	@+    	 dup; mov EAX, [EDX*4]
+			         inc edx                        	 
+	a      n     	 dup; mov EAX, n                	 Fetch number
+	b      @r    	                                	 Fetch from address in R
+	c      !     	 a!; mov [EDX*4], EAX; drop     	 Store to address on stack
+	             	 mov a*4, EAX; drop
+	             	 mov a*4, n
+	d                                           	
+	e      !+    	 mov [EDX*4], EAX; inc EDX      	 Store to address in A; increment A
+	f      !r    	                                	 Store to address in R; increment R
+	10     2*    	 shl EAX, 1                     	 Shift stack left
+	11     2/    	 sar EAX, 1                     	 Shift stack right, propagate sign
+	12     -     	 not EAX                        	 Ones complement stack
+	14     and   	 and EAX, [ESI]; nip            	 And to stack
+	             	 and EAX, n
+	15     or    	 xor EAX, [ESI]; nip            	 Exclusive-or to stack
+	             	 xor EAX, n
+	16     +     	 add EAX, [ESI]; nip            	 Add to stack
+	             	 add EAX, n
+	17     *+    	                                	 Multiply step
+	18     push  	 push EAX; drop                 	 Push stack onto Return
+	19     a     	                                	 Load A register onto stack
+	1a     dup   	 lea ESI, ESI-4; mov [ESI], EAX 	 Duplicate stack
+	1b     over  	 dup; mov EAX, [ESI+4]          	 Load 2nd datum onto stack
+	1c     pop   	 dup; pop EAX                   	 Pop Return onto stack
+	1d     a!    	 mov EDX, EAX; drop             	 Store stack into A register
+	1e     drop  	 lodsd                          	 Discard stack
+	1f     nop   	 nop                            	 Do nothing
+	
 Other Pentium macros:
 
-		Word                           	 Pentium                             	 Action
-		nip                            	 lea ESI, ESI+4                      	 Discard 2nd stack item; preserve flags
-		swap                           	 mov EDX, EAX;
-		                               	 mov EAX, [ESI]; mov [ESI], EDX      	 Exchange stack with 2nd number
-		+!                             	 a!; add [EDX], EAX; drop            	 Add to address on stack
-		                               	 add a*4, EAX; drop
-		                               	 add a*4, n
-		*                              	 imul EAX, [ESI]; nip                	 Multiply with stack
-		                               	 imul EAX, n
-		*/                             	 mov ECX, EAX; drop                  	 Multiply 2 numbers, divide by stack
-		                               	 imul [ESI]; idiv [ECX]; nip
+		Word  Pentium                             	 Action
+		nip   lea ESI, ESI+4                      	 Discard 2nd stack item; preserve flags
+		swap  mov EDX, EAX;
+		      mov EAX, [ESI]; mov [ESI], EDX      	 Exchange stack with 2nd number
+		+!    a!; add [EDX], EAX; drop            	 Add to address on stack
+		      add a*4, EAX; drop
+		      add a*4, n
+		*     imul EAX, [ESI]; nip                	 Multiply with stack
+		      imul EAX, n
+		*/    mov ECX, EAX; drop                  	 Multiply 2 numbers, divide by stack
+		      imul [ESI]; idiv [ECX]; nip
 
 * The word - is the unary ones-complement, not the binary subtract. Its result is 1 less than negate, and much faster in hardware.
 * The word or is exclusive-or. Inclusive-or is rarely needed.
